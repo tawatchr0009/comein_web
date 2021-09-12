@@ -1,3 +1,5 @@
+import 'package:comein_web/screen/login/login_screen.dart';
+import 'package:comein_web/screen/main/main_screen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:comein_web/screen/sign_in/sign_in_screen.dart';
 
@@ -6,6 +8,8 @@ import 'package:comein_web/screen/sign_in/sign_in_screen.dart';
 final Map<String, WidgetBuilder> routes = {
   // SplashScreen.routeName: (context) => SplashScreen(),
   SignInScreen.routeName: (context) => SignInScreen(),
+  LoginScreen.routeName: (context) => LoginScreen(),
+  MainScreen.routeName: (context) => MainScreen(),
   // ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   // LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
   // SignUpScreen.routeName: (context) => SignUpScreen(),

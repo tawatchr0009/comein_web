@@ -37,58 +37,62 @@ class _SignFormState extends State<SignForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _formKey,
-      child: Column(
-        children: [
-          buildEmailFormField(),
-          SizedBox(height: getProportionateScreenHeight(30)),
-          buildPasswordFormField(),
-          SizedBox(height: getProportionateScreenHeight(30)),
-          FloatingActionButton(
-            onPressed: () {},
-            tooltip: 'Increment',
-            child: Icon(Icons.add),
-          ),
-          Row(
-            children: [
-              Checkbox(
-                value: remember,
-                activeColor: kPrimaryColor,
-                onChanged: (value) {
-                  setState(() {
-                    remember = value;
-                  });
-                },
+    return Center(
+        child: SizedBox(
+            width: getScreenWidth(80),
+            child: Form(
+              key: _formKey,
+              child: Column(
+                children: [
+                  buildEmailFormField(),
+                  SizedBox(height: getProportionateScreenHeight(30)),
+                  buildPasswordFormField(),
+                  SizedBox(height: getProportionateScreenHeight(30)),
+                  FloatingActionButton(
+                    onPressed: () {},
+                    tooltip: 'Increment',
+                    child: Icon(Icons.add),
+                  ),
+                  Row(
+                    children: [
+                      Checkbox(
+                        value: remember,
+                        activeColor: kPrimaryColor,
+                        onChanged: (value) {
+                          setState(() {
+                            remember = value;
+                          });
+                        },
+                      ),
+                      Text("Remember me"),
+                      Spacer(),
+                      GestureDetector(
+                        // onTap: () => Navigator.pushNamed(
+                        //     context, ForgotPasswordScreen.routeName),
+                        child: Text(
+                          "Forgot Password",
+                          style:
+                              TextStyle(decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  FormError(errors: errors),
+                  SizedBox(height: getProportionateScreenHeight(20)),
+                  DefaultButton(
+                    text: "Continue",
+                    press: () {
+                      if (_formKey.currentState!.validate()) {
+                        _formKey.currentState!.save();
+                        // if all are valid then go to success screen
+                        KeyboardUtil.hideKeyboard(context);
+                        // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                      }
+                    },
+                  ),
+                ],
               ),
-              Text("Remember me"),
-              Spacer(),
-              GestureDetector(
-                // onTap: () => Navigator.pushNamed(
-                //     context, ForgotPasswordScreen.routeName),
-                child: Text(
-                  "Forgot Password",
-                  style: TextStyle(decoration: TextDecoration.underline),
-                ),
-              )
-            ],
-          ),
-          FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          DefaultButton(
-            text: "Continue",
-            press: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                // if all are valid then go to success screen
-                KeyboardUtil.hideKeyboard(context);
-                // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
-              }
-            },
-          ),
-        ],
-      ),
-    );
+            )));
   }
 
   TextFormField buildPasswordFormField() {
@@ -153,6 +157,7 @@ class _SignFormState extends State<SignForm> {
         //fillColor: Colors.yellow,
         labelText: "Email",
         hintText: "Enter your email",
+
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,

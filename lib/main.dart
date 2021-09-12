@@ -1,3 +1,5 @@
+import 'package:comein_web/screen/login/login_screen.dart';
+import 'package:comein_web/screen/main/main_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:comein_web/routes.dart';
@@ -120,7 +122,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // theme: theme2(),
       // home: SplashScreen(),
       // We use routeName so that we dont need to remember the name
-      initialRoute: SignInScreen.routeName,
+      //initialRoute: SignInScreen.routeName,
+      initialRoute: MainScreen.routeName,
       routes: routes,
     );
   }
