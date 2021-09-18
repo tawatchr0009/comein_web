@@ -114,6 +114,7 @@ class Body extends StatelessWidget {
                 ),
               ),
               Container(
+                // color: Colors.red,
                 child: HotelList(),
               ),
             ],
