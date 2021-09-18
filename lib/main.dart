@@ -26,10 +26,35 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        inputDecorationTheme: inputDecorationTheme(),
       ),
       home: MyHomePage(), //title: 'Flutter Demo Home Page'),
     );
   }
+}
+
+InputDecorationTheme inputDecorationTheme() {
+  OutlineInputBorder outlineInputBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(28),
+    borderSide: BorderSide(color: Colors.black),
+    gapPadding: 10,
+  );
+  return InputDecorationTheme(
+    // If  you are using latest version of flutter then lable text and hint text shown like this
+    // if you r using flutter less then 1.20.* then maybe this is not working properly
+    // if we are define our floatingLabelBehavior in our theme then it's not applayed
+    floatingLabelBehavior: FloatingLabelBehavior.always,
+    contentPadding: EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+    enabledBorder: outlineInputBorder,
+    focusedBorder: outlineInputBorder,
+    hintStyle: TextStyle(color: Colors.black),
+    labelStyle: TextStyle(color: Colors.black),
+    //fillColor: Colors.red, filled: false,
+    // counterStyle: TextStyle(color: Colors.red),
+    border: outlineInputBorder,
+
+    //ssuffixStyle: TextStyle(color: Colors.red),
+  );
 }
 
 class MyHomePage extends StatefulWidget {

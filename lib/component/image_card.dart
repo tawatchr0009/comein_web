@@ -8,7 +8,7 @@ class ImageCard extends StatelessWidget {
     required this.height,
     required this.width,
     required this.bgColor,
-    // required VoidCallback this.press,
+    required VoidCallback this.press,
   }) : super(key: key);
 
   final String path;
@@ -16,6 +16,7 @@ class ImageCard extends StatelessWidget {
   final double width;
   final Color bgColor;
   final String title;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class ImageCard extends StatelessWidget {
               color: Colors.white,
               width: this.width,
               child: TextButton(
-                onPressed: () {},
+                onPressed: press,
                 child: Text(
                   title,
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),

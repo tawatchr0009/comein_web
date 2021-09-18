@@ -1,3 +1,5 @@
+import 'package:comein_web/screen/hotel/home/hotel_home_screen.dart';
+import 'package:comein_web/screen/hotel_admin_login/hotel_admin_login_screen.dart';
 import 'package:comein_web/screen/login/login_screen.dart';
 import 'package:comein_web/screen/main/main_screen.dart';
 import 'package:flutter/widgets.dart';
@@ -10,6 +12,8 @@ final Map<String, WidgetBuilder> routes = {
   SignInScreen.routeName: (context) => SignInScreen(),
   LoginScreen.routeName: (context) => LoginScreen(),
   MainScreen.routeName: (context) => MainScreen(),
+  HotelAdminLoginScreen.routeName: (context) => HotelAdminLoginScreen(),
+  HotelHomeScreen.routeName: (context) => HotelHomeScreen(),
   // ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   // LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
   // SignUpScreen.routeName: (context) => SignUpScreen(),

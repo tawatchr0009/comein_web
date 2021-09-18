@@ -1,4 +1,5 @@
 import 'package:comein_web/component/image_card.dart';
+import 'package:comein_web/screen/hotel_admin_login/hotel_admin_login_screen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -49,6 +50,9 @@ class Body extends StatelessWidget {
           bgColor: Colors.amber,
           height: 220,
           width: 200,
+          press: () {
+            Navigator.pushNamed(context, HotelAdminLoginScreen.routeName);
+          },
         ),
         SeparatorBox(),
         ImageCard(
@@ -57,6 +61,9 @@ class Body extends StatelessWidget {
           bgColor: Colors.amber,
           height: 220,
           width: 200,
+          press: () {
+            //Navigator.pushNamed(context, HotelAdminLoginScreen.routeName);
+          },
         ),
         SeparatorBox(),
         ImageCard(
@@ -65,6 +72,9 @@ class Body extends StatelessWidget {
           bgColor: Colors.amber,
           height: 220,
           width: 200,
+          press: () {
+            //Navigator.pushNamed(context, HotelAdminLoginScreen.routeName);
+          },
         ),
       ]),
     ));
