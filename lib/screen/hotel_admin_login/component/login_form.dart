@@ -1,4 +1,5 @@
 import 'package:comein_web/screen/hotel/home/hotel_home_screen.dart';
+import 'package:comein_web/screen/hotel_admin_login/component/hotel_register_link.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatelessWidget {
@@ -55,7 +56,9 @@ class LoginForm extends StatelessWidget {
                           vertical: 25, horizontal: 25),
                     ))
               ]),
-            )
+            ),
+            LineBox(height: 20),
+            HotelRegisterLink(),
           ],
         ),
       ),

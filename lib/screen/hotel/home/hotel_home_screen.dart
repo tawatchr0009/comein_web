@@ -1,3 +1,4 @@
+import 'package:comein_web/component/top_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:comein_web/size_config.dart';
 import 'component/body.dart';
@@ -14,13 +15,7 @@ class HotelHomeScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: Text('Come In - Admin'),
         actions: [
-          Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                  onTap: () {}, child: Icon(Icons.login_outlined))),
-          SizedBox.fromSize(
-            size: Size(20, 10),
-          )
+          TopMenu(),
         ],
       ),
       body: Body(),

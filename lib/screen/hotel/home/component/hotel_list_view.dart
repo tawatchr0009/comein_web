@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 // import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 // import 'package:advanced_datatable/advanced_datatable.dart';
 
-class HotelList extends StatelessWidget {
+class HotelListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // List<DatatableHeader> _headers = [

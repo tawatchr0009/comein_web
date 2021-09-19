@@ -1,4 +1,6 @@
 import 'package:comein_web/screen/hotel/home/component/hotel_list.dart';
+import 'package:comein_web/screen/hotel/home/component/hotel_view.dart';
+import 'package:comein_web/screen/hotel/home/component/tour_list.dart';
 import 'package:flutter/material.dart';
 // import 'package:vertical_navigation_bar/vertical_navigation_bar.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -73,13 +75,20 @@ class Body extends StatelessWidget {
         icon: Icons.hotel,
       ),
       SideMenuItem(
+        // Priority of item to show on SideMenu, lower value is displayed at the top
         priority: 2,
+        title: 'Tour Agency',
+        onTap: () => page.jumpToPage(2),
+        icon: Icons.tour_outlined,
+      ),
+      SideMenuItem(
+        priority: 3,
         title: 'Settings',
         onTap: () {},
         icon: Icons.settings,
       ),
       SideMenuItem(
-        priority: 3,
+        priority: 4,
         title: 'Exit',
         onTap: () {},
         icon: Icons.exit_to_app,
@@ -116,6 +125,11 @@ class Body extends StatelessWidget {
               Container(
                 // color: Colors.red,
                 child: HotelList(),
+              ),
+              Container(
+                // color: Colors.red,
+                //child: TourList(),
+                child: TourView(),
               ),
             ],
           ),
