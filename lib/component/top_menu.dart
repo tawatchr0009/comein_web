@@ -1,3 +1,4 @@
+import 'package:comein_web/screen/main/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class TopMenu extends StatelessWidget {
@@ -10,7 +11,11 @@ class TopMenu extends StatelessWidget {
           Row(
         children: [
           Text("Logout"),
-          IconButton(icon: Icon(Icons.logout), onPressed: () {}),
+          IconButton(
+              icon: Icon(Icons.logout),
+              onPressed: () {
+                Navigator.pushNamed(context, MainScreen.routeName);
+              }),
           SizedBox.fromSize(size: Size(20, 10)),
         ],
       ),

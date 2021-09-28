@@ -1,5 +1,7 @@
 import 'package:comein_web/component/image_card.dart';
+import 'package:comein_web/screen/comein_admin_login/comein_admin_login_screen.dart';
 import 'package:comein_web/screen/hotel_admin_login/hotel_admin_login_screen.dart';
+import 'package:comein_web/screen/tour_admin_login/tour_admin_login_screen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -51,7 +53,7 @@ class Body extends StatelessWidget {
           height: 220,
           width: 200,
           press: () {
-            Navigator.pushNamed(context, HotelAdminLoginScreen.routeName);
+            Navigator.pushNamed(context, ComeinAdminLoginScreen.routeName);
           },
         ),
         SeparatorBox(),
@@ -62,7 +64,7 @@ class Body extends StatelessWidget {
           height: 220,
           width: 200,
           press: () {
-            //Navigator.pushNamed(context, HotelAdminLoginScreen.routeName);
+            Navigator.pushNamed(context, HotelAdminLoginScreen.routeName);
           },
         ),
         SeparatorBox(),
@@ -73,7 +75,7 @@ class Body extends StatelessWidget {
           height: 220,
           width: 200,
           press: () {
-            //Navigator.pushNamed(context, HotelAdminLoginScreen.routeName);
+            Navigator.pushNamed(context, TourAdminLoginScreen.routeName);
           },
         ),
       ]),

@@ -1,4 +1,5 @@
 import 'package:comein_web/component/layout_form.dart';
+import 'package:comein_web/screen/hotel/reset_password_screen.dart';
 import 'package:comein_web/screen/hotel_admin_login/hotel_admin_login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
@@ -46,7 +47,9 @@ class RegisterForm extends StatelessWidget {
                 desc: 'save succes.',
                 btnCancelOnPress: () {},
                 btnOkOnPress: () {
-                  Navigator.pushNamed(context, HotelAdminLoginScreen.routeName);
+                  //Navigator.pushNamed(context, HotelAdminLoginScreen.routeName);
+                  Navigator.pushNamed(
+                      context, HotelResetPasswordScreen.routeName);
                 },
               ).show();
               // Future<OkCancelResult> result = showOkCancelAlertDialog(

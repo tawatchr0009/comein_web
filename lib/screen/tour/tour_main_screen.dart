@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:comein_web/size_config.dart';
 import 'component/body.dart';
 
-class HotelHomeScreen extends StatelessWidget {
-  static String routeName = "/hotel/home";
+class TourMainScreen extends StatelessWidget {
+  static String routeName = "/tour/main";
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -13,7 +13,7 @@ class HotelHomeScreen extends StatelessWidget {
         backgroundColor: Colors.black,
         centerTitle: false,
         automaticallyImplyLeading: false,
-        title: Text('Come In - Hotel'),
+        title: Text('Come In - Tour Agency'),
         actions: [
           TopMenu(),
         ],

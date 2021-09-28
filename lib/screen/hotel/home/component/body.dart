@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 
+import 'hotel_staff_list.dart';
+
 class Body extends StatelessWidget {
   // final pageController = PageController(initialPage: 0, keepPage: true);
 
@@ -70,17 +72,17 @@ class Body extends StatelessWidget {
       SideMenuItem(
         // Priority of item to show on SideMenu, lower value is displayed at the top
         priority: 1,
-        title: 'Hotel',
+        title: 'Hotel-Staff',
         onTap: () => page.jumpToPage(1),
-        icon: Icons.hotel,
+        icon: Icons.account_tree_rounded,
       ),
-      SideMenuItem(
-        // Priority of item to show on SideMenu, lower value is displayed at the top
-        priority: 2,
-        title: 'Tour Agency',
-        onTap: () => page.jumpToPage(2),
-        icon: Icons.tour_outlined,
-      ),
+      // SideMenuItem(
+      //   // Priority of item to show on SideMenu, lower value is displayed at the top
+      //   priority: 2,
+      //   title: 'Tour Agency',
+      //   onTap: () => page.jumpToPage(2),
+      //   icon: Icons.tour_outlined,
+      // ),
       SideMenuItem(
         priority: 3,
         title: 'Settings',
@@ -124,7 +126,8 @@ class Body extends StatelessWidget {
               ),
               Container(
                 // color: Colors.red,
-                child: HotelList(),
+                //child: HotelList(),
+                child: HotelStaffList(),
               ),
               Container(
                 // color: Colors.red,

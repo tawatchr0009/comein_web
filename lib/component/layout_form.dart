@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LayoutForm extends StatelessWidget {
-  const LayoutForm({
+  LayoutForm({
     Key? key,
     required this.width,
     required this.high,
@@ -196,6 +196,39 @@ class LayoutEmailFeild extends StatelessWidget {
         style: TextStyle(color: Colors.black),
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
+            //   //focusColor: Colors.white,
+            //   //fillColor: Colors.yellow,
+            labelText: this.label,
+            hintText: this.hint,
+            border:
+                OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
+            //   // If  you are using latest version of flutter then lable text and hint text shown like this
+            //   // if you r using flutter less then 1.20.* then maybe this is not working properly
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+            suffixIcon: Icon(Icons.email)
+            //   suffixIcon: CustomSurffixIcon(svgIcon: "icons/Mail.svg"),
+            ),
+      ),
+    );
+  }
+}
+
+class LayoutPasswordFeild extends StatelessWidget {
+  const LayoutPasswordFeild({
+    required this.hint,
+    this.label = "",
+  });
+  final String label;
+  final String hint;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 10, top: 0, right: 10, bottom: 15),
+      child: TextFormField(
+        style: TextStyle(color: Colors.black),
+        //keyboardType: TextInputType.,
+        obscureText: true,
+        decoration: InputDecoration(
           //   //focusColor: Colors.white,
           //   //fillColor: Colors.yellow,
           labelText: this.label,
@@ -205,6 +238,7 @@ class LayoutEmailFeild extends StatelessWidget {
           //   // If  you are using latest version of flutter then lable text and hint text shown like this
           //   // if you r using flutter less then 1.20.* then maybe this is not working properly
           floatingLabelBehavior: FloatingLabelBehavior.always,
+          suffixIcon: Icon(Icons.lock_open_rounded),
           //   suffixIcon: CustomSurffixIcon(svgIcon: "icons/Mail.svg"),
         ),
       ),
